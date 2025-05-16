@@ -330,9 +330,7 @@ function App() {
     return (
         <>
             <h1 className="title">Maak je eigen rijksbegroting!</h1>
-            <p className="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae saepe sed
-                temporibus ullam? Aliquid amet commodi facilis numquam voluptatem voluptatibus! Adipisci dolores
-                mollitia nam odio quasi qui rem veritatis voluptate.</p>
+            <p className="sub-title">Waar zou jij het geld van Nederland aan uitgeven? Kies zelf hoeveel je besteedt aan zorg, onderwijs, defensie en meer. Verschuif de sliders en zie direct het effect van jouw keuzes. Klaar? Vergelijk jouw begroting met die van de echte overheid!</p>
             <div className="slider-container">
                 <div className="sliders">
                     <div style={{display: 'flex', justifyContent: 'space-between'}}>

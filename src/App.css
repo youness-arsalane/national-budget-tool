@@ -1,42 +1,226 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    /*max-width: 1600px;*/
+    /*max-width: 1280px;*/
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
+}
+
+
+/*!* Basisstijl voor alle browsers *!*/
+/*input[type="range"] {*/
+/*    -webkit-appearance: none;*/
+/*    width: 100%;*/
+/*    height: 6px;*/
+/*    background: #ddd;*/
+/*    border-radius: 5px;*/
+/*    outline: none;*/
+/*}*/
+
+/*!* Track in Chrome, Safari, Edge *!*/
+/*input[type="range"]::-webkit-slider-runnable-track {*/
+/*    background: #EFEFEF;*/
+/*    height: 10px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*!* Thumb in Chrome, Safari, Edge *!*/
+/*input[type="range"]::-webkit-slider-thumb {*/
+/*    -webkit-appearance: none;*/
+/*    height: 20px;*/
+/*    width: 20px;*/
+/*    border-radius: 50%;*/
+/*    background: #4CAF50;*/
+/*    cursor: pointer;*/
+/*    margin-top: -5px;*/
+/*}*/
+
+/*!* Firefox track *!*/
+/*input[type="range"]::-moz-range-track {*/
+/*    background: #2196f3;*/
+/*    height: 6px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*!* Firefox thumb *!*/
+/*input[type="range"]::-moz-range-thumb {*/
+/*    height: 20px;*/
+/*    width: 20px;*/
+/*    border-radius: 50%;*/
+/*    background: #4CAF50;*/
+/*    cursor: pointer;*/
+/*}*/
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    margin-bottom: 2rem;
+}
+
+.slider-container {
+    display: flex;
+    gap: 3rem;
+    /*gap: 1rem;*/
+}
+
+.slider-container > * {
+    width: 50%;
+}
+
+.sliders {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.sliders .slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.not-classified-slider {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.sliders .card-title {
+    margin: 0;
+    text-align: left;
+}
+
+.sliders .card-sub-title {
+    margin: 0 0 1rem;
+    text-align: left;
+    font-style: italic;
+}
+
+.slider-color {
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 100px;
+}
+
+.slider-label {
+    width: 40%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 90%;
+}
+
+.slider-input {
+    width: 40%;
+}
+
+.slider-value {
+    width: 18%;
+    text-align: right;
+    font-size: 90%;
+}
+
+.slider-total {
+    font-weight: 500;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-btn {
+    margin-top: 1rem;
+    background-color: #7E78B8;
+    color: #FFFFFF;
+    border: 0;
+    opacity: 70%;
+    cursor: not-allowed;
+    transition: opacity 1s;
+}
+
+.confirm-btn.active {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.slider-results {
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 90%;
+}
+
+.slider-results th,
+.slider-results td {
+    border: 1px solid #CCC;
+    padding: 2px 5px;
+}
+
+.slider-results td:nth-child(1) {
+    text-align: left;
+}
+
+.positive {
+    color: #51BF9D;
+}
+
+.negative {
+    color: #F06793;
+}
+
+.results {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.category-description-tooltip {
+
+    max-width: 400px !important;
 }

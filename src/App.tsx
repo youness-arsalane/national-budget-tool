@@ -311,6 +311,7 @@ function App() {
 
         setCategories(currentCategories);
         setChartData(populateChartData());
+        setShowResults(false);
     }
 
     function confirmChoice() {

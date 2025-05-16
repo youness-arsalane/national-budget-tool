@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import './App.css'
 import {ArcElement, Chart as ChartJS, Legend, Tooltip,} from 'chart.js';
 import {Pie} from 'react-chartjs-2';
@@ -10,6 +10,7 @@ function App() {
     const baseColors = [
         '#7E78B8',
         '#F06793',
+        '#E6B7CC',
         '#FCBA63',
         '#51BF9D',
         '#44C8F5',
@@ -283,6 +284,7 @@ function App() {
 
         setCategories(currentCategories);
         setChartData(populateChartData());
+        setRemainingPercentage(100);
         setShowResults(false);
     }
 
@@ -303,7 +305,9 @@ function App() {
     return (
         <>
             <h1 className="title">Maak je eigen rijksbegroting!</h1>
-            <p className="sub-title">Waar zou jij het geld van Nederland aan uitgeven? Kies zelf hoeveel je besteedt aan zorg, onderwijs, defensie en meer. Verschuif de sliders en zie direct het effect van jouw keuzes. Klaar? Vergelijk jouw begroting met die van de echte overheid!</p>
+            <p className="sub-title">Waar zou jij het geld van Nederland aan uitgeven? Kies zelf hoeveel je besteedt aan
+                zorg, onderwijs, defensie en meer. Verschuif de sliders en zie direct het effect van jouw keuzes. Klaar?
+                Vergelijk jouw begroting met die van de echte overheid!</p>
             <div className="slider-container">
                 <div className="sliders">
                     <div style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -341,9 +345,8 @@ function App() {
                                        value={categories[categoryTitle].percentage} onChange={handleSliderChange}
                                        data-title={categories[categoryTitle].title}/>
                                 <div
-                                    className={`slider-value ${categoryTitle === notClassifiedText ? 'slider-total' : ''}`}>€{parseInt(categories[categoryTitle].amount)} mld.
+                                    className={`slider-value ${categories[categoryTitle].amount === 0 ? 'empty' : ''}`}>€{parseInt(categories[categoryTitle].amount)} mld.
                                 </div>
-                                {/*<div className="slider-value">{categories[categoryTitle].percentage}%</div>*/}
                             </div>
                         </>
                     })}
@@ -359,7 +362,6 @@ function App() {
                         <div
                             className="slider-value slider-total">€{parseInt(categories[notClassifiedText].amount)} mld.
                         </div>
-                        {/*<div className="slider-value">{categories[categoryTitle].percentage}%</div>*/}
                     </div>
                     <button type="button"
                             className={`confirm-btn ${remainingPercentage <= 0 ? 'active' : ''}`}

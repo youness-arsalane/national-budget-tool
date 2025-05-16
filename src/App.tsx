@@ -265,34 +265,6 @@ function App() {
 
         setCategories(currentCategories);
         setChartData(populateChartData());
-        return;
-
-
-        /*
-        let totalPercentage = 0;
-        for (const categoryTitle in currentCategories) {
-            if (categoryTitle === notClassifiedText) {
-                continue;
-            }
-
-            // totalPercentage += categories[categoryTitle].percentage;
-            totalPercentage += currentCategories[categoryTitle].percentage;
-        }
-
-        console.log(totalPercentage);
-
-        const currentRemainingPercentage = parseInt(100 - totalPercentage);
-        if (currentRemainingPercentage < 0) {
-            return;
-        }
-
-        setRemainingPercentage(currentRemainingPercentage);
-
-
-        setCategories(currentCategories);
-        setChartData(populateChartData());
-
-         */
     };
 
     function resetSliders() {
